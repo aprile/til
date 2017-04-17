@@ -10,9 +10,8 @@
   "devDependencies": {},
   "scripts": {
     "watch": "npm run watch:stylus & npm run watch:pug",
-    "watch:stylus": "stylus --watch ./src/styles/index.styl -o ./static/index.css",
-    "watch:pug": "pug --watch ./src/pages/index.pug -o ./static/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:stylus": "stylus --watch ./src/styles/index.styl -o ./index.css",
+    "watch:pug": "pug --watch ./src/pages/index.pug -o ."
   },
   "author": "",
   "license": "ISC"
