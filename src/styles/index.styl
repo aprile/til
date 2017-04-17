@@ -1,0 +1,199 @@
+@require 'variables.styl'
+@require 'reset.styl'
+
+body
+  font-family $body
+  padding 75px 0
+
+  h1, h2, h3, h4, h5, h6
+    font-family $header
+
+  h1
+    text-align center
+    font-size 2em
+    padding 10px 0 20px 0
+
+  a
+    transition none
+    &:hover
+      border-bottom 1px solid #f4f4f4
+
+  p
+    font-size 1.2em
+    padding 10px 0
+
+
+    &.quote
+      font-size 1.5em
+      font-style italic
+
+    &.smallcaps
+      text-transform uppercase
+      letter-spacing 0.1em
+      font-size 0.8em
+      text-align center
+
+    &.byline
+      font-style italic
+      display block
+      padding 10px 0 30px 0
+      margin-left -8px
+
+    sup
+      font-size 0.7em
+      font-style normal
+
+    span.en
+      position relative
+      border-bottom 1px dashed #a0a8a8
+      cursor help
+
+      span.nl
+        color white
+        visibility hidden
+        opacity 0
+        position absolute
+        top -35px
+        left 50%
+        transform translateX(-50%)
+        font-style italic
+        background-color $charcoal
+        padding 2px 8px 2px 6px
+        transition opacity 0.2s
+        border-radius 2px
+        &:before
+          content ' '
+          position absolute
+          width 0
+          height 0
+          bottom -6px
+          left 50%
+          transform translateX(-50%)
+          border-left 6px solid transparent
+          border-right 6px solid transparent
+          border-top 6px solid $charcoal
+
+      &:hover
+        span.nl
+          visibility visible
+          opacity 1
+
+  section
+    max-width 550px
+    margin 0 auto
+    padding 30px
+
+    .src
+      border-top 1px solid #eaeaea
+      padding 10px
+      margin-top 20px
+
+      p
+        font-size 0.8em
+        color gray
+
+        sup
+          padding-right 5px
+
+    .center
+      margin-top 20px
+      margin-bottom 20px
+      display block
+      text-align center
+      img
+        padding-bottom 20px
+        display block
+        margin 0 auto
+
+    .inset
+      float left
+      margin-right 10px
+      text-align center
+      padding 10px
+
+      img
+        margin-bottom 10px
+
+      i
+        display block
+
+      span
+        display block
+
+      &.right
+        float right
+
+    .end
+      width 30px
+      height 4px
+      background-color black
+      margin 0 auto
+      margin-top 50px
+
+  // about
+
+  label.about
+    font-size 1.75em
+    position fixed
+    top 20px
+    left 30px
+    cursor pointer
+    -webkit-user-select none
+    user-select none
+
+  label.close
+    position absolute
+    top 30px
+    left 30px
+    width 22px
+    height 22px
+    background-image url('/images/close.svg')
+    background-size contain
+    display none
+    cursor pointer
+
+  .about-wrapper
+    position fixed
+    top 0
+    left 0
+    bottom 0
+    right 0
+    opacity 0
+    z-index -1
+    visibility hidden
+    background-color white
+    transition opacity 0.3s
+
+  .about-content
+    position absolute
+    top 50%
+    left 50%
+    display none
+    max-width 500px
+    max-height 300px
+    text-align center
+    transform translateX(-50%) translateY(-50%)
+
+    a.github
+      margin-top 10px
+      opacity 0.4
+      display inline-block
+      transition 0.2s
+
+      &:hover
+        opacity 1
+        border 0
+
+  input[type="checkbox"]
+    display none
+
+  input[type="checkbox"]:checked + .about-wrapper
+    visibility visible
+    opacity 1
+    z-index 1
+    background-color #dfeded
+
+    label.close,
+    .about-content
+      display block
+      z-index 1
