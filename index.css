@@ -1,6 +1,6 @@
 @font-face {
   font-family: Romana-Bold;
-  src: url("/static/fonts/Romana-Bold.ttf");
+  src: url("static/fonts/Romana-Bold.ttf");
 }
 *,
 *:after,
@@ -252,7 +252,7 @@ body label.close {
   left: 30px;
   width: 22px;
   height: 22px;
-  background-image: url("/static/images/close.svg");
+  background-image: url("static/images/close.svg");
   background-size: contain;
   display: none;
   cursor: pointer;
