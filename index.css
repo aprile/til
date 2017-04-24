@@ -121,9 +121,17 @@ body h1 {
 }
 body a {
   transition: none;
+  border-bottom: 1px solid #f4f4f4;
 }
 body a:hover {
-  border-bottom: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f76c48;
+}
+body .smallcaps {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  text-align: center;
+  font-style: normal;
 }
 body p {
   font-size: 1.2em;
@@ -132,12 +140,6 @@ body p {
 body p.quote {
   font-size: 1.5em;
   font-style: italic;
-}
-body p.smallcaps {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.8em;
-  text-align: center;
 }
 body p.byline {
   font-style: italic;
@@ -282,16 +284,21 @@ body .about-content {
   max-height: 300px;
   text-align: center;
   transform: translateX(-50%) translateY(-50%);
+  color: #fff;
 }
 body .about-content a.github {
   margin-top: 10px;
   opacity: 0.4;
   display: inline-block;
   transition: 0.2s;
+  border: 0 !important;
 }
 body .about-content a.github:hover {
   opacity: 1;
   border: 0;
+}
+body .about-content a:hover {
+  border-bottom: 1px solid #000;
 }
 body input[type="checkbox"] {
   display: none;
@@ -300,7 +307,7 @@ body input[type="checkbox"]:checked + .about-wrapper {
   visibility: visible;
   opacity: 1;
   z-index: 1;
-  background-color: #dfeded;
+  background-color: #f76c48;
 }
 body input[type="checkbox"]:checked + .about-wrapper label.close,
 body input[type="checkbox"]:checked + .about-wrapper .about-content {

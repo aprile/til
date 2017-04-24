@@ -15,23 +15,24 @@ body
 
   a
     transition none
+    border-bottom 1px solid #f4f4f4
     &:hover
-      border-bottom 1px solid #f4f4f4
+      border-bottom 1px solid rgba(247, 108, 72, 1)
+
+  .smallcaps
+    text-transform uppercase
+    letter-spacing 0.1em
+    font-size 14px
+    text-align center
+    font-style normal
 
   p
     font-size 1.2em
     padding 10px 0
 
-
     &.quote
       font-size 1.5em
       font-style italic
-
-    &.smallcaps
-      text-transform uppercase
-      letter-spacing 0.1em
-      font-size 0.8em
-      text-align center
 
     &.byline
       font-style italic
@@ -177,16 +178,21 @@ body
     max-height 300px
     text-align center
     transform translateX(-50%) translateY(-50%)
+    color white
 
     a.github
       margin-top 10px
       opacity 0.4
       display inline-block
       transition 0.2s
+      border 0 !important
 
       &:hover
         opacity 1
         border 0
+
+    a:hover
+      border-bottom 1px solid black
 
   input[type="checkbox"]
     display none
@@ -195,7 +201,7 @@ body
     visibility visible
     opacity 1
     z-index 1
-    background-color #dfeded
+    background-color rgba(247, 108, 72, 1)
 
     label.close,
     .about-content
