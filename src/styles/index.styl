@@ -4,6 +4,7 @@
 body
   font-family $body
   padding 75px 0
+  background-color $red
 
   h1, h2, h3, h4, h5, h6
     font-family $header
@@ -17,7 +18,7 @@ body
     transition none
     border-bottom 1px solid #f4f4f4
     &:hover
-      border-bottom 1px solid rgba(247, 108, 72, 1)
+      border-bottom 1px solid $red
 
   .smallcaps
     text-transform uppercase
@@ -92,6 +93,7 @@ body
       p
         font-size 0.8em
         color gray
+        padding 5px 0
 
         sup
           padding-right 5px
@@ -130,6 +132,9 @@ body
       background-color black
       margin 0 auto
       margin-top 50px
+
+  footer
+    text-align center
 
   // about
 
@@ -180,6 +185,9 @@ body
     transform translateX(-50%) translateY(-50%)
     color white
 
+    @media $mobile-devices
+      width 80%
+
     a.github
       margin-top 10px
       opacity 0.4
@@ -201,7 +209,7 @@ body
     visibility visible
     opacity 1
     z-index 1
-    background-color rgba(247, 108, 72, 1)
+    background-color $red
 
     label.close,
     .about-content

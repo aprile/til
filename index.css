@@ -105,6 +105,7 @@ img {
 body {
   font-family: 'Crimson Text', serif;
   padding: 75px 0;
+  background-color: $red;
 }
 body h1,
 body h2,
@@ -124,7 +125,7 @@ body a {
   border-bottom: 1px solid #f4f4f4;
 }
 body a:hover {
-  border-bottom: 1px solid #f76c48;
+  border-bottom: 1px solid $red;
 }
 body .smallcaps {
   text-transform: uppercase;
@@ -199,6 +200,7 @@ body section .src {
 body section .src p {
   font-size: 0.8em;
   color: #808080;
+  padding: 5px 0;
 }
 body section .src p sup {
   padding-right: 5px;
@@ -238,6 +240,9 @@ body section .end {
   background-color: #000;
   margin: 0 auto;
   margin-top: 50px;
+}
+body footer {
+  text-align: center;
 }
 body label.about {
   position: fixed;
@@ -286,6 +291,11 @@ body .about-content {
   transform: translateX(-50%) translateY(-50%);
   color: #fff;
 }
+@media $mobile-devices {
+  body .about-content {
+    width: 80%;
+  }
+}
 body .about-content a.github {
   margin-top: 10px;
   opacity: 0.4;
@@ -307,7 +317,7 @@ body input[type="checkbox"]:checked + .about-wrapper {
   visibility: visible;
   opacity: 1;
   z-index: 1;
-  background-color: #f76c48;
+  background-color: $red;
 }
 body input[type="checkbox"]:checked + .about-wrapper label.close,
 body input[type="checkbox"]:checked + .about-wrapper .about-content {
