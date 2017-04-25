@@ -134,6 +134,11 @@ body .smallcaps {
   text-align: center;
   font-style: normal;
 }
+body sup {
+  font-size: 0.7em;
+  font-style: normal;
+  color: #f00;
+}
 body p {
   font-size: 1.2em;
   padding: 10px 0;
@@ -147,10 +152,6 @@ body p.byline {
   display: block;
   padding: 10px 0 30px 0;
   margin-left: -8px;
-}
-body p sup {
-  font-size: 0.7em;
-  font-style: normal;
 }
 body p span.en {
   position: relative;
