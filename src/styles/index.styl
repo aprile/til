@@ -1,10 +1,19 @@
-@require 'variables.styl'
 @require 'reset.styl'
+
+@font-face
+    font-family Romana-Bold
+    src url("static/fonts/Romana-Bold.ttf")
+
+$header = 'Romana-Bold', serif
+$body = 'Crimson Text', serif
+$mono = 'Inconsolata', monospace
+
+$charcoal = #373a3a
+$red = rgba(247, 108, 72, 1)
 
 body
   font-family $body
   padding 75px 0
-  background-color $red
 
   h1, h2, h3, h4, h5, h6
     font-family $header
@@ -173,7 +182,7 @@ body
     opacity 0
     z-index -1
     visibility hidden
-    background-color white
+    background-color $red
     transition opacity 0.3s
 
   .about-content
@@ -211,7 +220,6 @@ body
     visibility visible
     opacity 1
     z-index 1
-    background-color $red
 
     label.close,
     .about-content
