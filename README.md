@@ -1,0 +1,3 @@
+# Compile
+
+`npm run watch`
